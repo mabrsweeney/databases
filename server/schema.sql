@@ -1,3 +1,4 @@
+DROP DATABASE chat;
 CREATE DATABASE chat;
 
 USE chat;
@@ -16,7 +17,7 @@ CREATE TABLE rooms (
 
 CREATE TABLE messages (
   ID int NOT NULL auto_increment,
-  text VARCHAR (200),
+  message VARCHAR (200),
   user_id INT,
   room_id INT,
   PRIMARY KEY (ID),
@@ -24,6 +25,7 @@ CREATE TABLE messages (
   FOREIGN KEY (room_id) REFERENCES rooms(ID)
 );
 
+insert into rooms (name) values ('Hello');
 /* Create other tables and define schemas for them here! */
 
 
