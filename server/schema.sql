@@ -5,13 +5,13 @@ USE chat;
 
 CREATE TABLE users (
   ID int NOT NULL auto_increment,
-  name VARCHAR (20),
+  username VARCHAR (20) UNIQUE,
   PRIMARY KEY (ID)
 );
 
 CREATE TABLE rooms (
   ID int NOT NULL auto_increment,
-  name VARCHAR (20),
+  roomname VARCHAR (20),
   PRIMARY KEY (ID)
 );
 
@@ -24,8 +24,11 @@ CREATE TABLE messages (
   FOREIGN KEY (user_id) REFERENCES users(ID),
   FOREIGN KEY (room_id) REFERENCES rooms(ID)
 );
+insert into users (username) values ('Jim');
+insert into users (username) values ('Katherine');
 
-insert into rooms (name) values ('Hello');
+insert into rooms (roomname) values ('Hello');
+insert into rooms (roomname) values ('main');
 /* Create other tables and define schemas for them here! */
 
 

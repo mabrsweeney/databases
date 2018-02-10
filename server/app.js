@@ -1,5 +1,6 @@
 var express = require('express');
 var db = require('./db');
+var path = require('path');
 
 // Middleware
 var morgan = require('morgan');

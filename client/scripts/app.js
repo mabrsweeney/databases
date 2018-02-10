@@ -73,7 +73,8 @@ var app = {
         app.$message.val('');
 
         // Trigger a fetch to update the messages, pass true to animate
-        app.fetch();      }
+        app.fetch();      
+      }
     });
   },
 
